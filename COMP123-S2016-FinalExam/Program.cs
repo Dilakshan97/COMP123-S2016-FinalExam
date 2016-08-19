@@ -8,7 +8,12 @@ namespace COMP123_S2016_FinalExam
 {
     public static class Program
     {
-        public static Character character = new Character();
+        public static Character character; 
+        public static SplashForm splashForm;
+        public static GenerateNameForm generateNameForm; 
+        public static AbilityGeneratorForm abilityGeneratorForm;
+
+        
 
         /// <summary>
         /// The main entry point for the application.
@@ -17,9 +22,13 @@ namespace COMP123_S2016_FinalExam
         static void Main()
         {
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AbilityGeneratorForm());
+
+                         character = new Character();
+                         splashForm = new SplashForm();
+                         generateNameForm = new GenerateNameForm();
+                         abilityGeneratorForm = new AbilityGeneratorForm();
+                         Application.Run(splashForm);
+
         }
     }
 }
